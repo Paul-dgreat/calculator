@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <div>
+        <input style="width: 280px; height: 40px;" id="screen">
+        </div><br>
+
+        <div>
+            <div class="dispnum1">
+                <button onclick="displayNumber(1)">1</button>
+                <button onclick="displayNumber(2)">2</button>
+                <button onclick="displayNumber(3)">3</button>
+                <button onclick="displayNumber(4)">4</button>
+            </div>
+
+            <div class="dispnum1">
+                <button onclick="displayNumber(5)">5</button>
+                <button onclick="displayNumber(6)">6</button>
+                <button onclick="displayNumber(7)">7</button>
+                <button onclick="displayNumber(8)">8</button>
+            </div>
+
+            <div class="dispnum1">
+                <button onclick="displayNumber(9)">9</button>
+                <button onclick="displayNumber(0)">0</button>
+                <button onclick="displayNumber('+')">+</button>
+                <button onclick="displayNumber('-')">-</button>
+            </div>
+
+            <div class="dispnum1">
+                <button onclick="displayNumber('*')">*</button>
+                <button onclick="displayNumber('/')">/</button>
+                <button onclick="displayNumber('.')">.</button>
+                <button onclick="calculate()">=</button>
+            </div>
+
+            <div class="dispnum1">
+                <button onclick="deleteNumber()">Del</button>
+                <button onclick="clearAll()">C</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+        function displayNumber(number){
+            document.getElementById('screen').value += number;
+        }
+
+        function calculate(){
+            const calculation = document.getElementById('screen').value;
+
+            const result = eval(calculation);
+            document.getElementById('screen').value = result
+        }
+
+        function deleteNumber(){
+            let input = document.getElementById('screen').value;
+
+            let newNumber = input.slice(0, -1)
+            document.getElementById('screen').value = newNumber
+        }
+
+        function clearAll(){
+            const throwaway = document.getElementById('screen').value;
+            screen.value=""
+        }
+
+    </script>
+</body>
+</html>

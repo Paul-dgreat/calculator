@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+}
+
+.container{
+    padding: 70px 500px;
+}
+
+input{
+    border: none;
+    font-size: larger;
+    background-color: grey;
+    border-radius: 10px;
+    color: white;
+}
+
+.dispnum1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 30px 10px;
+    gap: 10px;
+}
+
+button{
+    border: none;
+    background-color: grey;
+    color: white;
+    font-size: larger;
+    border-radius: 100px;
+}
+
+button:hover{
+    background-color: gold;
+    color: black;
+}
